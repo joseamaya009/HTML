@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Etiquetas HTML</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/Style.css">
 </head>
 <body>
 <header>
@@ -25,7 +25,6 @@
 <section class="categoria">
   <h2 class="categoria-titulo">Etiquetas de Tablas</h2>
 
-  <!-- 17. table -->
   <div class="tarjeta">
     <div class="tarjeta-header">
       <span class="etiqueta-nombre">&lt;table&gt;</span>
@@ -58,9 +57,7 @@
       <div id="table1-dem" class="tab-panel">
         <div class="Información">
           <table>
-            <thead>
-              <tr><th>Lenguaje</th><th>Tipo</th><th>Año</th></tr>
-            </thead>
+            <thead><tr><th>Lenguaje</th><th>Tipo</th><th>Año</th></tr></thead>
             <tbody>
               <tr><td>HTML5</td><td>Marcado</td><td>2014</td></tr>
               <tr><td>CSS3</td><td>Estilos</td><td>2011</td></tr>
@@ -73,32 +70,22 @@
     </div>
   </div>
 
-  <!-- 18. tr -->
   <div class="tarjeta">
     <div class="tarjeta-header">
       <span class="etiqueta-nombre">&lt;tr&gt;</span>
       <h3>Fila de tabla</h3>
     </div>
     <div class="tarjeta-body">
-      <p><strong>Definición:</strong> Define una fila horizontal dentro de la tabla. Contiene celdas de encabezado <code>&lt;th&gt;</code> o celdas de datos <code>&lt;td&gt;</code>. Las celdas pueden fusionarse con <code>colspan</code> (columnas) y <code>rowspan</code> (filas).</p>
+      <p><strong>Definición:</strong> Define una fila horizontal dentro de la tabla. Contiene celdas de encabezado <code>&lt;th&gt;</code> o celdas de datos <code>&lt;td&gt;</code>. Las celdas pueden fusionarse con <code>colspan</code> y <code>rowspan</code>.</p>
       <div class="tabs">
         <button class="tab-btn active" onclick="tab(this,'tr1','sin')">Sintaxis</button>
         <button class="tab-btn" onclick="tab(this,'tr1','dem')">Información</button>
       </div>
       <div id="tr1-sin" class="tab-panel active">
-<pre>&lt;!-- Fila de encabezado con &lt;th&gt; --&gt;
-&lt;tr&gt;
+<pre>&lt;tr&gt;
   &lt;th scope="col"&gt;Producto&lt;/th&gt;
   &lt;th scope="col"&gt;Precio&lt;/th&gt;
 &lt;/tr&gt;
-
-&lt;!-- Fila de datos con &lt;td&gt; --&gt;
-&lt;tr&gt;
-  &lt;td&gt;Teclado&lt;/td&gt;
-  &lt;td&gt;$50.000&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;!-- Celda que ocupa 2 columnas --&gt;
 &lt;tr&gt;
   &lt;td colspan="2"&gt;Agotado temporalmente&lt;/td&gt;
 &lt;/tr&gt;</pre>
@@ -106,23 +93,10 @@
       <div id="tr1-dem" class="tab-panel">
         <div class="Información">
           <table>
-            <thead>
-              <tr>
-                <th scope="col">Producto</th>
-                <th scope="col">Q1</th>
-                <th scope="col">Q2</th>
-              </tr>
-            </thead>
+            <thead><tr><th scope="col">Producto</th><th scope="col">Q1</th><th scope="col">Q2</th></tr></thead>
             <tbody>
-              <tr>
-                <td>Teclado</td>
-                <td colspan="2" style="text-align:center;background:#fef9e7">Agotado (colspan=2)</td>
-              </tr>
-              <tr>
-                <td>Mouse</td>
-                <td>$35.000</td>
-                <td>$30.000</td>
-              </tr>
+              <tr><td>Teclado</td><td colspan="2" style="text-align:center;background:#fef9e7">Agotado (colspan=2)</td></tr>
+              <tr><td>Mouse</td><td>$35.000</td><td>$30.000</td></tr>
             </tbody>
           </table>
           <p style="margin-top:10px;font-size:0.85rem;color:#888">Usa <code>scope="col"</code> en <code>&lt;th&gt;</code> para indicar que el encabezado corresponde a esa columna.</p>
@@ -137,9 +111,8 @@
   </div>
 </section>
 </main>
-<footer>
-  <p>Blog Educativo — 20 Etiquetas HTML explicadas</p>
-</footer>
-<script src="script.js"></script>
+<footer><p>Etiquetas HTML explicadas por categorías</p></footer>
+<button id="btnTop" onclick="irArriba()" title="Volver arriba">⬆</button>
+<script src="js/script.js"></script>
 </body>
 </html>

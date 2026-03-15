@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Etiquetas HTML</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/Style.css">
 </head>
 <body>
 <header>
@@ -25,38 +25,30 @@
 <section class="categoria">
   <h2 class="categoria-titulo">Etiquetas Multimedia</h2>
 
-  <!-- 19. img -->
   <div class="tarjeta">
     <div class="tarjeta-header">
       <span class="etiqueta-nombre">&lt;img&gt;</span>
       <h3>Imagen</h3>
     </div>
     <div class="tarjeta-body">
-      <p><strong>Definición:</strong> Inserta una imagen en el documento. Es una etiqueta vacía (sin cierre). El atributo <code>alt</code> es obligatorio para accesibilidad: describe la imagen a quienes no pueden verla.</p>
+      <p><strong>Definición:</strong> Inserta una imagen en el documento. Es una etiqueta vacía (sin cierre). El atributo <code>alt</code> es obligatorio para accesibilidad.</p>
       <div class="tabs">
         <button class="tab-btn active" onclick="tab(this,'img1','sin')">Sintaxis</button>
         <button class="tab-btn" onclick="tab(this,'img1','dem')">Información</button>
       </div>
       <div id="img1-sin" class="tab-panel active">
-<pre>&lt;!-- Imagen básica --&gt;
-&lt;img src="foto.jpg" alt="Descripción de la imagen"&gt;
+<pre>&lt;img src="foto.jpg" alt="Descripción de la imagen"&gt;
 
-&lt;!-- Con dimensiones y carga diferida --&gt;
 &lt;img src="foto.jpg"
      alt="Paisaje de montaña al atardecer"
      width="800" height="450"
-     loading="lazy"&gt;
-
-&lt;!-- Imagen decorativa (alt vacío) --&gt;
-&lt;img src="separador.png" alt=""&gt;</pre>
+     loading="lazy"&gt;</pre>
       </div>
       <div id="img1-dem" class="tab-panel">
         <div class="Información">
           <figure>
             <img src="https://storage.googleapis.com/gx-global-cms/mkt/cdc8836e-f220-48ed-a5fb-1e09de5bb46f.jpg"
-                 alt="Foto de ejemplo"
-                 style="width:100%;border-radius:4px"
-                 loading="lazy">
+                 alt="Foto de ejemplo" style="width:100%;border-radius:4px" loading="lazy">
             <figcaption style="font-size:0.8rem;color:#888;margin-top:6px;font-style:italic">Ejemplo de &lt;img&gt; con alt descriptivo</figcaption>
           </figure>
           <p style="margin-top:8px;font-size:0.85rem;color:#888">Siempre incluye <code>width</code> y <code>height</code> para evitar saltos de diseño mientras carga la página.</p>
@@ -65,7 +57,6 @@
     </div>
   </div>
 
-  <!-- 20. iframe -->
   <div class="tarjeta">
     <div class="tarjeta-header">
       <span class="etiqueta-nombre">&lt;iframe&gt;</span>
@@ -78,28 +69,20 @@
         <button class="tab-btn" onclick="tab(this,'iframe1','dem')">Información</button>
       </div>
       <div id="iframe1-sin" class="tab-panel active">
-<pre>&lt;!-- Video de YouTube --&gt;
-&lt;iframe src="https://www.youtube.com/embed/VIDEO_ID"
+<pre>&lt;iframe src="https://www.youtube.com/embed/UB1O30fR-EE"
         title="Título descriptivo del video"
         width="560" height="315"
         allowfullscreen
         loading="lazy"&gt;
-&lt;/iframe&gt;
-
-&lt;!-- Mapa de Google --&gt;
-&lt;iframe src="https://maps.google.com/maps?q=..."
-        title="Mapa de ubicación"
-        width="600" height="450"&gt;
 &lt;/iframe&gt;</pre>
       </div>
       <div id="iframe1-dem" class="tab-panel">
         <div class="Información">
           <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:4px">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                    title="Video de ejemplo"
+            <iframe src="https://www.youtube.com/embed/UB1O30fR-EE"
+                    title="Tutorial de HTML"
                     style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
-                    allowfullscreen
-                    loading="lazy">
+                    allowfullscreen loading="lazy">
             </iframe>
           </div>
           <p style="margin-top:8px;font-size:0.85rem;color:#888">Siempre agrega el atributo <code>title</code> para que los lectores de pantalla puedan describir el contenido incrustado.</p>
@@ -114,9 +97,8 @@
   </div>
 </section>
 </main>
-<footer>
-  <p>Blog Educativo — 20 Etiquetas HTML explicadas</p>
-</footer>
-<script src="script.js"></script>
+<footer><p>Etiquetas HTML explicadas por categorías</p></footer>
+<button id="btnTop" onclick="irArriba()" title="Volver arriba">⬆</button>
+<script src="js/script.js"></script>
 </body>
 </html>

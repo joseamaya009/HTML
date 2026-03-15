@@ -42,3 +42,30 @@ function enviarFormulario() {
   msg.textContent      = '¡Gracias ' + nombre + '! Recibirás confirmación en ' + email + '.';
   msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
+
+// Botón volver arriba — usa IntersectionObserver para detectar si el header es visible
+window.addEventListener('DOMContentLoaded', function () {
+  const btn = document.getElementById('btnTop');
+  const header = document.querySelector('header');
+  if (!btn || !header) return;
+
+  const observer = new IntersectionObserver(function (entries) {
+    // Si el header NO es visible, el usuario bajó → mostrar botón
+    if (!entries[0].isIntersecting) {
+      btn.style.opacity = '1';
+      btn.style.pointerEvents = 'auto';
+    } else {
+      btn.style.opacity = '0';
+      btn.style.pointerEvents = 'none';
+    }
+  }, { threshold: 0 });
+
+  observer.observe(header);
+});
+
+// Subir al tope
+function irArriba() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+}

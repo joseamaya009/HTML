@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Etiquetas HTML</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/Style.css">
 </head>
 <body>
 <header>
@@ -25,7 +25,6 @@
 <section class="categoria">
   <h2 class="categoria-titulo">Etiquetas de Listas</h2>
 
-  <!-- 9. ul -->
   <div class="tarjeta">
     <div class="tarjeta-header">
       <span class="etiqueta-nombre">&lt;ul&gt;</span>
@@ -46,18 +45,13 @@
       </div>
       <div id="ul1-dem" class="tab-panel">
         <div class="Información">
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ul>
+          <ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
           <p style="margin-top:10px;font-size:0.85rem;color:#888">💡 Ideal para: ingredientes, características, opciones, menús de navegación.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- 10. ol -->
   <div class="tarjeta">
     <div class="tarjeta-header">
       <span class="etiqueta-nombre">&lt;ol&gt;</span>
@@ -70,42 +64,27 @@
         <button class="tab-btn" onclick="tab(this,'ol1','dem')">Información</button>
       </div>
       <div id="ol1-sin" class="tab-panel active">
-<pre>&lt;!-- Lista numérica --&gt;
-&lt;ol&gt;
+<pre>&lt;ol&gt;
   &lt;li&gt;Instalar el editor&lt;/li&gt;
   &lt;li&gt;Crear index.html&lt;/li&gt;
   &lt;li&gt;Abrir en el navegador&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;!-- Lista con letras, desde C --&gt;
-&lt;ol type="A" start="3"&gt;
-  &lt;li&gt;Opción C&lt;/li&gt;
-  &lt;li&gt;Opción D&lt;/li&gt;
 &lt;/ol&gt;</pre>
       </div>
       <div id="ol1-dem" class="tab-panel">
         <div class="Información" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
           <div>
             <p style="font-size:0.85rem;font-weight:bold;margin-bottom:6px">Pasos:</p>
-            <ol>
-              <li>Instalar el editor</li>
-              <li>Crear index.html</li>
-              <li>Abrir en el navegador</li>
-            </ol>
+            <ol><li>Instalar el editor</li><li>Crear index.html</li><li>Abrir en el navegador</li></ol>
           </div>
           <div>
             <p style="font-size:0.85rem;font-weight:bold;margin-bottom:6px">Con letras:</p>
-            <ol type="A" start="3">
-              <li>Opción C</li>
-              <li>Opción D</li>
-            </ol>
+            <ol type="A" start="3"><li>Opción C</li><li>Opción D</li></ol>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- 11. li -->
   <div class="tarjeta">
     <div class="tarjeta-header">
       <span class="etiqueta-nombre">&lt;li&gt;</span>
@@ -121,7 +100,7 @@
 <pre>&lt;ul&gt;
   &lt;li&gt;Elemento simple&lt;/li&gt;
   &lt;li&gt;&lt;a href="#"&gt;Elemento con enlace&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Elemento con lista anidada
+  &lt;li&gt;Con lista anidada
     &lt;ul&gt;
       &lt;li&gt;Sub-elemento 1&lt;/li&gt;
       &lt;li&gt;Sub-elemento 2&lt;/li&gt;
@@ -134,12 +113,7 @@
           <ul>
             <li>Elemento simple</li>
             <li><a href="#">Elemento con enlace</a></li>
-            <li>Elemento con lista anidada
-              <ul>
-                <li>Sub-elemento 1</li>
-                <li>Sub-elemento 2</li>
-              </ul>
-            </li>
+            <li>Elemento con lista anidada<ul><li>Sub-elemento 1</li><li>Sub-elemento 2</li></ul></li>
           </ul>
         </div>
       </div>
@@ -152,9 +126,8 @@
   </div>
 </section>
 </main>
-<footer>
-  <p>Blog Educativo — 20 Etiquetas HTML explicadas</p>
-</footer>
-<script src="script.js"></script>
+<footer><p>Etiquetas HTML explicadas por categorías</p></footer>
+<button id="btnTop" onclick="irArriba()" title="Volver arriba">⬆</button>
+<script src="js/script.js"></script>
 </body>
 </html>

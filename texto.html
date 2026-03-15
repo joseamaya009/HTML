@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Etiquetas HTML</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/Style.css">
 </head>
 <body>
 <header>
@@ -25,7 +25,6 @@
 <section class="categoria">
   <h2 class="categoria-titulo">Etiquetas de Texto</h2>
 
-  <!-- 5. h1-h6 -->
   <div class="tarjeta">
     <div class="tarjeta-header">
       <span class="etiqueta-nombre">&lt;h1&gt; — &lt;h6&gt;</span>
@@ -59,7 +58,6 @@
     </div>
   </div>
 
-  <!-- 6. p -->
   <div class="tarjeta">
     <div class="tarjeta-header">
       <span class="etiqueta-nombre">&lt;p&gt;</span>
@@ -72,9 +70,7 @@
         <button class="tab-btn" onclick="tab(this,'p1','dem')">Información</button>
       </div>
       <div id="p1-sin" class="tab-panel active">
-<pre>&lt;p&gt;Este es el primer párrafo. Tiene texto que el navegador 
-muestra en bloque con espacio arriba y abajo.&lt;/p&gt;
-
+<pre>&lt;p&gt;Este es el primer párrafo.&lt;/p&gt;
 &lt;p&gt;Este es el segundo párrafo, separado del primero.&lt;/p&gt;</pre>
       </div>
       <div id="p1-dem" class="tab-panel">
@@ -87,7 +83,6 @@ muestra en bloque con espacio arriba y abajo.&lt;/p&gt;
     </div>
   </div>
 
-  <!-- 7. strong -->
   <div class="tarjeta">
     <div class="tarjeta-header">
       <span class="etiqueta-nombre">&lt;strong&gt;</span>
@@ -100,20 +95,18 @@ muestra en bloque con espacio arriba y abajo.&lt;/p&gt;
         <button class="tab-btn" onclick="tab(this,'strong1','dem')">Información</button>
       </div>
       <div id="strong1-sin" class="tab-panel active">
-<pre>&lt;p&gt;&lt;strong&gt;Advertencia:&lt;/strong&gt; Guarda tu trabajo antes de cerrar.&lt;/p&gt;
-&lt;p&gt;El campo de &lt;strong&gt;correo electrónico&lt;/strong&gt; es obligatorio.&lt;/p&gt;</pre>
+<pre>&lt;p&gt;&lt;strong&gt;Advertencia:&lt;/strong&gt; Guarda tu trabajo antes de cerrar.&lt;/p&gt;</pre>
       </div>
       <div id="strong1-dem" class="tab-panel">
         <div class="Información">
           <p><strong>Advertencia:</strong> Guarda tu trabajo antes de cerrar.</p>
           <p>El campo de <strong>correo electrónico</strong> es obligatorio.</p>
-          <p style="margin-top:8px;font-size:0.85rem;color:#888">Usa <code>&lt;b&gt;</code> solo para negrita visual sin significado semántico (p.ej. palabras clave en resúmenes).</p>
+          <p style="margin-top:8px;font-size:0.85rem;color:#888">Usa <code>&lt;b&gt;</code> solo para negrita visual sin significado semántico.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- 8. em -->
   <div class="tarjeta">
     <div class="tarjeta-header">
       <span class="etiqueta-nombre">&lt;em&gt;</span>
@@ -133,7 +126,7 @@ muestra en bloque con espacio arriba y abajo.&lt;/p&gt;
         <div class="Información">
           <p>Debes <em>siempre</em> guardar tu trabajo.</p>
           <p><em>Yo</em> lo hice, no él.</p>
-          <p style="margin-top:8px;font-size:0.85rem;color:#888">Usa <code>&lt;i&gt;</code> solo para cursiva decorativa (términos técnicos, títulos de obras). <code>&lt;em&gt;</code> es para énfasis real.</p>
+          <p style="margin-top:8px;font-size:0.85rem;color:#888">Usa <code>&lt;i&gt;</code> solo para cursiva decorativa. <code>&lt;em&gt;</code> es para énfasis real.</p>
         </div>
       </div>
     </div>
@@ -145,9 +138,8 @@ muestra en bloque con espacio arriba y abajo.&lt;/p&gt;
   </div>
 </section>
 </main>
-<footer>
-  <p>Blog Educativo — 20 Etiquetas HTML explicadas</p>
-</footer>
-<script src="script.js"></script>
+<footer><p>Etiquetas HTML explicadas por categorías</p></footer>
+<button id="btnTop" onclick="irArriba()" title="Volver arriba">⬆</button>
+<script src="js/script.js"></script>
 </body>
 </html>
